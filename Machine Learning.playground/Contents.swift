@@ -6,7 +6,7 @@ let dataTable = try MLDataTable(contentsOf: csvFile)
 
 print(dataTable)
 
-let classifierColumns = ["accelerometerAccelerationX", "accelerometerAccelerationY", "accelerometerAccelerationZ", "label"]
+let classifierColumns = ["accelerometerAccelerationX", "accelerometerAccelerationY", "accelerometerAccelerationZ", "gyroRotationX", "gyroRotationY", "gyroRotationZ", "label"]
 let classifierTable = dataTable[classifierColumns]
 
 let (classifierEvaluationTable, classifierTrainingTable) = classifierTable.randomSplit(by: 0.20, seed: 5)
